@@ -1,0 +1,216 @@
+/*Import link for the PT Serif font from fonts.google.com*/
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+html{
+    overflow-x: hidden; /*Prevents the browser from
+    displaying a left to right scroll bar as a result
+    of negative margin values*/
+    scroll-behavior: smooth; /*Creates a smooth scrolling
+    effect when a bookmark link is clicked*/
+}
+
+body {
+    font-family: "PT Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+    background-color: rgb(58, 102, 119);
+}
+
+
+/*NAVBAR*/
+.nav-bar{
+    position: sticky; /*Creates a sticky element that says
+    in the same spot in the browser screen*/
+    top: 0; /*Tells the browser to stick the element at the
+    top of the page based on user scrolling*/
+    z-index: 9; /*Sets the stack layer of the navbar to scroll
+    over all elements*/
+}
+
+ul{
+    display: flex; /*Creates a flex container which will
+    expand or shrink elements to fill the space available
+    to them and place the elements side by side horizontally*/
+    list-style-type: none; /*Removes the default styling 
+    for unordered list elements*/
+    align-items: center;
+    margin: -8px -8px 0px -8px; /*The margin order is top,
+    right, bottom, and left. The negative margins will strech
+    the background beyond the edge of the browser screen*/
+    background-color: rgb(4, 72, 99);
+    border-bottom: 5px solid rgba(171, 195, 231, 0.753);
+}
+
+a{
+    display: block; /*Displays anchor elements vertically
+    on a new line, this was added so the drop down menu
+    displays vertically and not horizontally on the screen*/
+    font-family: "PT Serif", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgba(229, 235, 241, 0.884);
+    text-align: center;
+    width: 100px;
+    padding: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in;
+}
+
+/*BODY*/
+
+.container{
+    display: inline-block;
+    background-size: 100%;
+    padding-top: 60px;
+    padding-left: 30px;
+}
+
+/*HEADERS*/
+
+h1{
+     font-family: "PT Serif", cursive; /*Font from 
+     fonts.google.com*/
+     font-size: 80px;
+     color: black;
+     text-align: center;
+}
+
+h2, h3{
+    font-family: 'PT Serif', serif; /*Font from
+    fonts.google.com*/
+    font-size: 30px;
+    text-align: center;
+}
+
+/*PARAGRAPHS*/
+
+.blockquote{
+    font-family: 'PT Serif', serif; /*Font from 
+    fonts.google.com*/
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    text-align: center;
+}
+
+
+/*MAYAN RUINS IMAGES*/
+
+/*Positions elements to sit side by side on the screen*/
+.column{
+    float: left;
+    width: 48%;
+    padding: 10px;
+}
+
+/*Styling for screens 1200px or smaller*/
+@media screen and (max-width: 1200px){
+    .column{
+        width: 100%;
+        padding: 0px;
+        margin-left: -15px; /*Centers each column on 
+        the screen*/
+    }
+}
+
+/*Specifically styles the first 7 img tag elements contained
+in elements with the .column class*/
+.column img:nth-child(-n + 7){
+    width: 500px;
+    height: 350px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4),
+    0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/*CONTACT FORM CSS*/
+
+/*Sets up the content within the div tag containing the ID
+contact to be centered on the webpage*/
+#contact{
+    display: block;
+    margin-bottom: 70px;
+}
+
+form{
+    display: table; /*This will display the form in a table
+    format as rows and columns*/
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto; /*The browser will automatically 
+    calculate margins to center the form on the screen*/
+}
+
+/*This will specifically target the input tags that are
+nested within the form tags*/
+form input{
+    font-family: 'PT Serif', Courier, monospace;
+    font-size: 15px;
+    color: rgb(165, 165, 165);
+    border: 2px solid rgb(165, 165, 165);
+    border-radius: 5px;
+    padding: 3px;
+    margin: 10px 15px 10px 0px;
+    transition: 0.3s ease-out; /*Transitions back to light
+    gray when a user clicks away from an input field*/
+}
+
+form input:focus{
+    border: 2px solid rgb(1, 128, 106);
+    color: black;
+    outline: none; /*Removes default border added when the
+    focus pseudo class is triggered*/
+    transition: 0.3s ease-out;
+}
+
+label{
+    font-family: 'PT Serif', serif; /*Font from
+    fonts.google.com*/
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+textarea{
+    width: 100%;
+    height: 200px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    resize: both; /*Will allow the user to resize the text
+    ara both in width and height*/
+    border: 3px solid rgb(165, 165, 165);
+    border-radius: 5px;
+    font-family: 'PT Serif', Courier, monospace;
+    color: rgb(165, 165, 165);
+    font-size: 15px;
+    transition: 0.3s ease-out; /*Will transition back to 
+    light gray*/
+}
+
+textarea:focus{
+    color: black;
+    border: 3px solid rgb(1, 128, 106);
+    transition: 0.3s ease-out;
+    outline: none;
+}
+
+input[type="submit"]{
+    background-color: rgb(1, 128, 106);
+    border: none;
+    border-radius: 35px;
+    font-family: 'PT Serif', serif; /*Font from
+    fonts.google.com*/
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 25px;
+    margin-top: 20px;
+    color: #fff;
+    cursor: pointer;
+    float: right; /*Positions the submit button to the
+    bottom right of the form*/
+}
+
+input[type="submit"]:hover{
+    background-color: rgb(212, 140, 81);
+}
+

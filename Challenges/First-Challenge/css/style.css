@@ -1,0 +1,17 @@
+/*IMAGE*/
+
+/*Center the image to prevent that the imagen display all over the screen*/
+.center{
+    display:block;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+}
+
+/*Add rounded values to all four corners of the image and added filter to 
+apply a drop shadow effect to the image*/
+img{
+    border-radius: 15px;
+    filter:drop-shadow(8px 8px 10px red)
+}

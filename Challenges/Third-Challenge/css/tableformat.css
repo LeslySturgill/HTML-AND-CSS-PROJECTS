@@ -1,0 +1,26 @@
+/**** GENERAL STYLING *****/
+body {
+    font-family: Tahoma, sans-serif;
+    font-size: 18px;
+}
+
+h1{
+    font-family: Tahoma, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+/**** END OF GENERAL STYLING *****/
+
+/**** TABLE STYLING ****/
+table, th, td {
+    border: 2px solid purple
+}
+
+th, td {
+    padding: 10px 5px 15px 20px;
+}
+
+th {
+    background-color: pink;
+}
+/***** END OF TABLE STYLING *****/

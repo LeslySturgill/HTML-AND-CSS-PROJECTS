@@ -1,0 +1,12 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    text-align: justify;
+    color: #eb0c17ec;
+}
+
+@media screen and (max-width: 599px) {
+    p{
+        color: blue;
+    }
+}
